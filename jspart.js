@@ -1,14 +1,23 @@
-// var usersData = ['Виталий Иванович', 'Иннокентий Петрович', 'Александр Александрович', 'Игорь Олегович', 'Евгений Петрович', 'Игнат Денисович', 'Сергей Александрович', 'Семён Петрович'];
-// var query = 'Александрович';
-// var matchingUsers = 0;
+const outlines = '__________________________________________________________'
+
+var usersData = ['Виталий Иванович', 'Иннокентий Петрович', 'Александр Александрович', 'Игорь Олегович', 'Евгений Петрович', 'Игнат Денисович', 'Сергей Александрович', 'Семён Петрович'];
+
+console.log(outlines)
+
+var query = 'Александрович';
+var matchingUsers = 0;
 
 
-// usersData.forEach(element => {
-//     let isok = (() => element.indexOf(query))
-//     if (isok () != -1) {
-//         matchingUsers++
-//     }
-// });
+usersData.forEach(element => {
+    let isok = (() => element.indexOf(query))
+    if (isok () != -1) {
+        matchingUsers++
+    }
+});
+console.log(matchingUsers)
+
+console.log(outlines)
+
 // /* Техническое задание
 
 // Напиши программу, которая будет собирать статистику из пользовательских данных.
