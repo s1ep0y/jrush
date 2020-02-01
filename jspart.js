@@ -59,29 +59,31 @@ console.log(outlines)
 
 //__________________________________________________________________________________________________________________________________________________________________________________________________________________
 
-// var indicators = ['сила', 'гибкость', 'выносливость', 'скорость', 'ловкость'];
-// var levels = [8, 15, 9, 12, 11];
-// var trainingTime = 30;
+var indicators = ['сила', 'гибкость', 'выносливость', 'скорость', 'ловкость'];
+var levels = [8, 15, 9, 12, 11];
+var trainingTime = 30;
 
 
 
-// if (trainingTime < 30 || trainingTime == 30) {
-//     levels[indicators.indexOf('скорость')] = levels[indicators.indexOf('скорость')] + 3
-//     levels[indicators.indexOf('ловкость')] = levels[indicators.indexOf('ловкость')] + 3
+if (trainingTime < 30 || trainingTime == 30) {
+    levels[indicators.indexOf('скорость')] = levels[indicators.indexOf('скорость')] + 3
+    levels[indicators.indexOf('ловкость')] = levels[indicators.indexOf('ловкость')] + 3
     
-// }
-// if (trainingTime>30 && trainingTime<60 || trainingTime==60) {
-//     levels[indicators.indexOf('гибкость')] = levels[indicators.indexOf('гибкость')] + 3
-// }
+}
+if (trainingTime>30 && trainingTime<60 || trainingTime==60) {
+    levels[indicators.indexOf('гибкость')] = levels[indicators.indexOf('гибкость')] + 3
+}
 
-// if (trainingTime>60) {
-//     levels[indicators.indexOf('сила')] = levels[indicators.indexOf('сила')] + 2
-//     levels[indicators.indexOf('выносливость')] = levels[indicators.indexOf('выносливость')] + 2
-// }
+if (trainingTime>60) {
+    levels[indicators.indexOf('сила')] = levels[indicators.indexOf('сила')] + 2
+    levels[indicators.indexOf('выносливость')] = levels[indicators.indexOf('выносливость')] + 2
+}
 
-// console.log(levels)
+console.log(levels)
+console.log(outlines)
 
 
+console.log(outlines)
 /* Техническое задание
 
 Напиши программу, которая будет следить за моими спортивными показателями.
@@ -102,19 +104,17 @@ console.log(outlines)
 //__________________________________________________________________________________________________________________________________________________________________________________________________________________
 
 
-// var numbers = [12,12,15,7,1,15]
-// var uniqueNumbers = [];
+var numbers = [12,12,15,7,1,15]
+var uniqueNumbers = [];
 
 
-// perebor = (()=>{uniqueNumbers = Array.from(new Set(numbers))}) //Не так понял задание
+uniqueNumbers = numbers.filter((elem) => numbers.indexOf(elem) === numbers.lastIndexOf(elem));
     
 
-// console.log(uniqueNumbers)
+console.log(uniqueNumbers)
 
 
-// Ок, вот тут я сказачно поебался не всопмним про ластиндекс
-
-// uniqueNumbers = numbers.filter((elem) => numbers.indexOf(elem) === numbers.lastIndexOf(elem));
+console.log(outlines)
 // боженька дал нам стрелочные функции, которые я использую почти для всего, кроме их прямого назначения
 
 
@@ -138,11 +138,11 @@ array.push().
 
 
 
-// var numbers = [1, 3, 5, 7, 9, 11];
-// numbers = numbers.reverse()
-// console.log(numbers)
+var numbers = [1, 3, 5, 7, 9, 11];
+numbers = numbers.reverse()
+console.log(numbers)
 
-
+console.log(outlines)
 /* Техническое задание
 
 Напишите программу, которая меняет массив так, чтобы его элементы шли в обратном порядке, задом наперёд.
@@ -154,19 +154,22 @@ array.push().
 */
 //__________________________________________________________________________________________________________________________________________________________________________________________________________________
 
-// var numbers = [3, 5, 15, 6, 2, 1];
+var numbers = [3, 5, 15, 6, 2, 1];
 
-// const  puzirek = ((arr)=>{
-//     for (var index = 0; index < arr.length-1; index++) {
-//         for (var j=0; j<arr.length-1 -index; j++) {
-//             if (arr[j+1] < arr[j]) {
-//                 let t = arr[j+1]; arr[j+1] = arr[j]; arr[j]=t;
-//             }   
-//         }
-//     }
-//     return arr
-// })
-// console.log(puzirek(numbers))
+const  puzirek = ((arr)=>{
+    for (var index = 0; index < arr.length-1; index++) {
+        for (var j=0; j<arr.length-1 -index; j++) {
+            if (arr[j+1] < arr[j]) {
+                let t = arr[j+1]; arr[j+1] = arr[j]; arr[j]=t;
+            }   
+        }
+    }
+    return arr
+})
+console.log(puzirek(numbers))
+
+
+console.log(outlines)
 /* Техническое задание
 
 Напиши сортировку массива выбором.
@@ -176,18 +179,20 @@ array.push().
 Отсортируй значения в массиве по возрастанию, от самого маленького значения к наибольшему.
 //__________________________________________________________________________________________________________________________________________________________________________________________________________________
 */
-// let zp = 100000
+let zp = 1002000
 
-// var calculateSalary = function (money) {
-//     if (money < 100000 ) {
-//         return (Math.floor(money*((100-35)/100)))        
-//     } else{
-//         return (Math.floor(money*((100-45)/100)))        
-//     }
-// };
+var calculateSalary = function (money) {
+    if (money < 100000 ) {
+        return (Math.floor(money*((100-35)/100)))        
+    } else{
+        return (Math.floor(money*((100-45)/100)))        
+    }
+};
 
-// console.log(calculateSalary(zp))
+console.log(calculateSalary(zp))
 
+
+console.log(outlines)
 /* Техническое задание
 
 Мяу! Мне нужна программа, которая от «грязной» зарплаты (зарплата до вычета налогов) посчитает примерную «чистую» зарплату (которая выдаётся на лапы).
@@ -201,27 +206,29 @@ array.push().
 //__________________________________________________________________________________________________________________________________________________________________________________________________________________
 
 
-// getYears = ((startYear, lastYear, sum)=>{
-//     const sumfunc = ((year)=>{
-//         let start = 0;
-//         year.toString().split("").forEach(element => {
-//             let plus = Math.floor(element)
-//             start = start + plus
-//         });
-//         return start
-//     })
-//     arr = []
-//     for (let index = startYear; index < lastYear || index==lastYear; index++) {
-//         if (sumfunc(index) == sum) {
-//             arr.push(index)
-//         }
+getYears = ((startYear, lastYear, sum)=>{
+    const sumfunc = ((year)=>{
+        let start = 0;
+        year.toString().split("").forEach(element => {
+            let plus = Math.floor(element)
+            start = start + plus
+        });
+        return start
+    })
+    let arr = []
+    for (let index = startYear; index < lastYear || index==lastYear; index++) {
+        if (sumfunc(index) == sum) {
+            arr.push(index)
+        }
         
-//     }
-//     return arr;
-// })
+    }
+    return arr;
+})
 
-// console.log(getYears(2010, 2025, 9))
+console.log(getYears(2010, 2025, 9))
 
+
+console.log(outlines)
 
 // console.log(Math.floor(sum.toString().split("")[0]))
 
@@ -253,15 +260,17 @@ array.push().
 //__________________________________________________________________________________________________________________________________________________________________________________________________________________
 
 
-// getDayOfWeek = ((firstWeekDay, dayForSearh)=>{
-//     const days = ['понедельник', 'вторник', 'среда' , 'четверг', 'пятница', 'суббота', 'воскресенье']
-//     const start = days.indexOf(firstWeekDay) - 1
-//     return days[Math.floor((dayForSearh+start)%7)] 
-// })
+getDayOfWeek = ((firstWeekDay, dayForSearh)=>{
+    const days = ['понедельник', 'вторник', 'среда' , 'четверг', 'пятница', 'суббота', 'воскресенье']
+    const start = days.indexOf(firstWeekDay) - 1
+    return days[Math.floor((dayForSearh+start)%7)] 
+})
 
-// console.log(getDayOfWeek('понедельник', 1))
-// console.log(getDayOfWeek('четверг', 32))
+console.log(getDayOfWeek('понедельник', 1))
+console.log(getDayOfWeek('четверг', 32))
 
+
+console.log(outlines)
 // .indexOf()
 /* Техническое задание
 
@@ -274,20 +283,22 @@ array.push().
 */
 
 
-// calculateRoots = ((a, b ,c)=>{
-//     let d =(b*b)-(4*a*c)
-//     if (d<0) {
-//             return 'Корней нет'
-//     } else {
-//         if (d===0) {
-//             return `Корень равен ${-b/(2*a)}`
-//         }
-//     }
-//     return `Первый корень равен ${(-b+Math.sqrt(d))/(2*a)}, второй корень равен ${(-b-Math.sqrt(d))/(2*a)}`
-// })
+calculateRoots = ((a, b ,c)=>{
+    let d =(b*b)-(4*a*c)
+    if (d<0) {
+            return 'Корней нет'
+    } else {
+        if (d===0) {
+            return `Корень равен ${-b/(2*a)}`
+        }
+    }
+    return `Первый корень равен ${(-b+Math.sqrt(d))/(2*a)}, второй корень равен ${(-b-Math.sqrt(d))/(2*a)}`
+})
 
-// console.log(calculateRoots(1,-2,-3))
+console.log(calculateRoots(1,-2,-3))
 
+
+console.log(outlines)
 /* Техническое задание
 
 Мяу! Напиши функцию calculateRoots, которая будет считать корни через дискриминант.
@@ -304,20 +315,21 @@ array.push().
 
 //__________________________________________________________________________________________________________________________________________________________________________________________________________________
 
-// var calculateDeposit = function (start, percent, howLong, capit) {
-//     if(!capit){
-//         return Math.floor((percent/12/100*start)*howLong+start)
-//     } else{
-//         let money = start
-//         for (let index = 0; (index+1) <= howLong; index++) {
-//             money += percent/12/100*money
-//         }
-//         return Math.floor(money)
-//     }
-// };
-// console.log(calculateDeposit(100000, 10, 2, true)) //101673
+var calculateDeposit = function (start, percent, howLong, capit) {
+    if(!capit){
+        return Math.floor((percent/12/100*start)*howLong+start)
+    } else{
+        let money = start
+        for (let index = 0; (index+1) <= howLong; index++) {
+            money += percent/12/100*money
+        }
+        return Math.floor(money)
+    }
+};
+console.log(calculateDeposit(100000, 10, 2, true)) //101673
 
 
+console.log(outlines)
 /* Техническое задание
 
 Мяу! Мне нужно посчитать, сколько я заработаю денег на вкладах с разными условиями. Оформи программу, как функцию calculateDeposit с четырьмя параметрами:
@@ -337,25 +349,27 @@ array.push().
 
 //__________________________________________________________________________________________________________________________________________________________________________________________________________________
 
-// getProfitableDeposit = ((start, howLong, percentDefault, percentCapital)=>{
+getProfitableDeposit = ((start, howLong, percentDefault, percentCapital)=>{
 
-//     const defaultget = (()=> Math.floor(percentDefault/12/100*start*howLong+start))
+    const defaultget = (()=> Math.floor(percentDefault/12/100*start*howLong+start))
 
-//     const capitelGet = (()=>{
-//         let money = start
-//         for (let index = 0; (index+1) <= howLong; index++) {
-//             money += percentCapital/12/100*money
-//         }
-//         return Math.floor(money)    
-//     })
+    const capitelGet = (()=>{
+        let money = start
+        for (let index = 0; (index+1) <= howLong; index++) {
+            money += percentCapital/12/100*money
+        }
+        return Math.floor(money)    
+    })
 
-//     if (defaultget() > capitelGet()) {
-//         return `Выбирай обычный вклад. Заработаешь ${defaultget()}`
-//     } else
-//     return `Выбирай капитализацию. Заработаешь ${capitelGet()}`
-// })
+    if (defaultget() > capitelGet()) {
+        return `Выбирай обычный вклад. Заработаешь ${defaultget()}`
+    } else
+    return `Выбирай капитализацию. Заработаешь ${capitelGet()}`
+})
 
-// console.log(getProfitableDeposit(10000, 9, 7, 6.8))
+console.log(getProfitableDeposit(10000, 9, 7, 6.8))
+
+console.log(outlines)
 
 /* Техническое задание
 
@@ -375,13 +389,13 @@ array.push().
 
 //__________________________________________________________________________________________________________________________________________________________________________________________________________________
 
-// const arr = [{"name":"Василий","age":6},{"name":"Виктор","age":4},{"name":"Пётр","age":8},{"name":"Иннокентий","age":1}]
+const arr = [{"name":"Василий","age":6},{"name":"Виктор","age":4},{"name":"Пётр","age":8},{"name":"Иннокентий","age":1}]
 
-// getSortedArray = ((arr, param) => arr.sort((a,b)=>a[param] < b[param] ? -1:1))
+getSortedArray = ((arr, param) => arr.sort((a,b)=>a[param] < b[param] ? -1:1))
 
-// console.log(getSortedArray(arr, 'age'))
+console.log(getSortedArray(arr, 'age'))
 
-
+console.log(outlines)
 /*
 
 Создайте функцию getSortedArray. У неё должно быть два параметра. Первый — массив, который нужно отсортировать. Второй — имя ключа в объектах. Именно по значению этого ключа нужно будет делать сортировку.
@@ -394,29 +408,30 @@ array.push().
 
 //__________________________________________________________________________________________________________________________________________________________________________________________________________________
 
-// getData = ((keys, wayIsIt)=>{
-//     newArr = []
-//     for (let index = 0; index <= wayIsIt.length-1; index++) {
-//         let obj = new Object()
-//         for (let j = 0; j < keys.length; j++) {
-//             if(wayIsIt[index][j]){
-//                 obj[keys[j]] = wayIsIt[index][j]
-//             }
-//         }
-//         newArr.push(obj)
-//     }
-//     return newArr
-// })
+getData = ((keys, wayIsIt)=>{
+    newArr = []
+    for (let index = 0; index <= wayIsIt.length-1; index++) {
+        let obj = new Object()
+        for (let j = 0; j < keys.length; j++) {
+            if(wayIsIt[index][j]){
+                obj[keys[j]] = wayIsIt[index][j]
+            }
+        }
+        newArr.push(obj)
+    }
+    return newArr
+})
 
-// keys = ['имя', 'любимый цвет', 'любимое блюдо'];
-// thinhs = [
-//     ['Василий', 'красный', 'борщ'],
-//     ['Мария'],
-//     ['Иннокентий', 'жёлтый', 'пельмени', '18', 'Азовское']
-// ];
+keys = ['имя', 'любимый цвет', 'любимое блюдо'];
+thinhs = [
+    ['Василий', 'красный', 'борщ'],
+    ['Мария'],
+    ['Иннокентий', 'жёлтый', 'пельмени', '18', 'Азовское']
+];
 
-// console.log(getData(keys, thinhs))
+console.log(getData(keys, thinhs))
 
+console.log(outlines)
 /*
 
 Создайте функцию getData. У неё должно быть два параметра. Первый параметр — массив с ключами. Второй — массив с массивами данных.
