@@ -16,9 +16,9 @@
     margin: 0;
     z-index: 2;
     }
-    &:hover, &:active{
+    &:hover{
         &::after{
-            filter: drop-shadow(0px 0px 0.5 rgb(125, 185, 138));
+            filter: drop-shadow(0px 1px 0.2px #7db98a) drop-shadow(0px -1px 0.2px #7db98a) drop-shadow(1px 0px 0.2px #7db98a) drop-shadow(-1px 0px 0.2px #7db98a);
         }
     }
     &::before{
