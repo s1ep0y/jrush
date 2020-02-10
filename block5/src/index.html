@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,23 +10,24 @@
     </head>
     <body>
         <header class='pageHeader leftPadding rightPadding'>
-            <section class="menuSection pageHeader__section">
-                <span class='pageHeader__menuOpenButton '><input type="button" onclick="openMenu()" name='openMenu'></span>
+            <div class="menuSection pageHeader__section">
+                <button class='pink-button pink-button_menu' onclick="openMenu()" name="Open-Menu">Открыть меню</button>
                 <div class="border"></div>
-                <a class='companyLogo companyLogo_Header' href="#"></a>
-            </section>
-            <section class='pageHeader__section'>
-                <section class="talkLinks talkLinksInHeader">
-                    <a href="#" class='talkLinks__chat '></a>
-                    <a href='#' class='talkLinks__call '></a>
-                    <a href='#' class='talkLinks__profile '></a>
-                </section>
+                <img src="./img/icons/Group.svg" alt="Company logo" class="company-logo company-logo_header">
+            </div>
+            <div class='pageHeader__section'>
+                <div class="contact-links contact-links_header">
+                    <button class='pink-button pink-button_chat' name="chat">Чат</button>
+                    <button class='pink-button pink-button_call' name="chat">Звонок</button>
+                    <button class='pink-button pink-button_profile' name="profile">Профиль</button>
+                    
+                </div>
                 <div class="border"></div>
-                <section class="repairSection">
-                    <a href="#" class='repairSection__makeARequest '></a>
-                    <a href='#' class='repairSection__repairStatus '></a>
-                </section>
-            </section>
+                <div class="repairSection">
+                    <button class='pink-button pink-button_repair-request' name="repair-request">Оставить заявку</button>
+                    <button class='pink-button pink-button_repair-status' name="repair-status">Статус ремонта</button>
+                </d>
+            </div>
         </header>
 
 
@@ -35,10 +36,10 @@
 
 
             <aside class='sideMenu' id='menu'>
-                <section class='sideMenu__header  rightPadding'>
+                <div class='sideMenu__header  rightPadding'>
                     <div class="sideMenu__leftPart leftPadding">
-                        <span class="  sideMenu__closeButton"><input type="button" value="" onclick="hideMenu()"></span>
-                        <a class='companyLogo' href="#"></a>
+                        <button class='pink-button pink-button_close' onclick="hideMenu()" name="Close-Menu">Закрыть меню</button>
+                        <img src="./img/icons/Group.svg" alt="Company logo" class="company-logo">
                     </div>
                     <span class=" sideMenu__searchButton" ><input type="button" value=""" name="search" onclick=""></span>
     
@@ -68,13 +69,13 @@
                             <a href="#">Контакты</a>
                         </li>
                     </ul>
-                </section>
-                <section class="sideMenu__footer leftPadding">
-                    <section class="talkLinks ">
-                        <a href="#" class='talkLinks__chat '></a>
-                        <a href='#' class='talkLinks__call '></a>
-                        <a href='#' class='talkLinks__profile '></a>
-                    </section>
+                </div>
+                <div class="sideMenu__footer leftPadding">
+                    <div class="talkLinks ">
+                        <button class='pink-button pink-button_chat' name="chat">Чат</button>
+                        <button class='pink-button pink-button_call' name="chat">Звонок</button>
+                        <button class='pink-button pink-button_profile' name="profile">Профиль</button>
+                    </div>
     
                     <a class='sideMenu__email' href="mailto:mail@cps.com">mail@cps.com</a>
                     <h2 class="sideMenu__phoneNumber">
@@ -91,34 +92,34 @@
                             <a href="#">CH</a>
                         </li>
                     </ul>
-                </section>
+                </div>
             </aside>
 
 
-            <section class="contentHeader">
-                <h1 class='contentHeader__title leftPadding'>Услуги и сервисы</h1>
+            <section class="content-header">
+                <h1 class='content-header__title leftPadding'>Услуги и сервисы</h1>
                 <section class="repairSection repairSectionDekstop rightPadding">
                     <a href="#" class='repairSection__makeARequest '>Оставить заявку</a>
                     <a href='#' class='repairSection__repairStatus '>Статус ремонта</a>
                 </section>
-                <nav class="contentHeader__navigation">
-                    <ul class="contentHeader__linkList leftPadding">
-                        <li class="contentHeader__link selected">
+                <nav class="content-header__navigation">
+                    <ul class="content-header__linkList leftPadding">
+                        <li class="content-header__link">
                             <a href='#'>Ремонтируемые бренды</a>
                         </li>
-                        <li class="contentHeader__link">
+                        <li class="content-header__link">
                             <a href='#'>Ремонтируемые устройства</a>
                         </li>
-                        <li class="contentHeader__link">
+                        <li class="content-header__link">
                             <a href='#'>Цены на услуги</a>
                         </li>
-                        <li class="contentHeader__link">
+                        <li class="content-header__link">
                             <a href='#'>Адреса сервисных центров</a>
                         </li>
-                        <li class="contentHeader__link">
+                        <li class="content-header__link">
                             <a href='#'>Специальные цены</a>
                         </li>
-                        <li class="contentHeader__link">
+                        <li class="content-header__link">
                             <a href='#'>Отзывы</a>
                         </li>
                     </ul>

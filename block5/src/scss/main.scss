@@ -9,6 +9,50 @@ body {
     font-family: 'TT Lakes';
 }
 
+.pink-button{
+    border-radius: 50%;
+    background: red;
+    width: 40px;
+    height: 40px;
+    background-color: #ff3e79;
+    background-repeat: no-repeat;
+    background-position: center;
+    font-size: 0;
+    border: none;
+    &_menu{
+        background-image: url('./../img/icons/burger.svg');
+        @media (min-width: 1120px) {display: none;}
+    }
+    &_chat{
+        background-image: url('./../img/icons/chat.svg');
+    }
+    &_call{
+        background-image: url('./../img/icons/call.svg');
+        margin: 0 20px;
+    }
+    &_profile{
+        background-image: url('./../img/icons/profile.svg');
+    }
+    &_repair-request{
+        background-image: url('./../img/icons/repair.svg');
+        margin-right: 20px;
+    }
+    &_repair-status{
+        background-image: url('./../img/icons/checkstatus.svg');
+    }
+
+
+    &_close{
+        background-image: url('./../img/icons/close.svg');
+        margin-right: 16px;
+        @media (min-width: 1120px) {display: none;}
+    }
+    &_
+    &:hover{
+        transform: scale(1.1);
+    }
+    
+}
 
 
 //разделитель
@@ -64,40 +108,32 @@ div.border {
         @media (min-width: 768px) and (max-width: 1120px) {
             display: flex;
         }
-
     }
 
 }
 
-.companyLogo {
+.company-logo {
     background-image: url('./../img/icons/Group.svg');
     width: 96px;
     height: 50px;
-
-}
-
-.companyLogo.companyLogo_Header {
-    margin-left: 20px;
-
-    @media (min-width: 768px) and (max-width: 1120px) {
-        margin-left: 0;
+    &_header{
+        margin-left: 20px;
+        @media (min-width: 768px) and (max-width: 1120px) {
+            margin-left: 0;
+        }
     }
+
 }
 
 .pageHeader {
     @media (min-width: 1120px) {
         display: none;
     }
-
     background-color: #FFFFFF;
     display: flex;
     align-items: center;
     justify-content: space-between;
     height: 88px;
-
-    &__menuOpenButton {
-        @include bgOfCircle('burger');
-    }
 }
 
 .repairSection.repairSectionDekstop{
@@ -112,9 +148,7 @@ div.border {
 
     @media (min-width:1120px) {
         font-size: em(16);
-        // line-height: em(24);
         background-position: right;
-
     }
 
     a {
@@ -125,15 +159,6 @@ div.border {
         text-decoration: none;
         color: #1B1C21;
     }}
-
-    &__makeARequest {
-        margin-right: 20px;
-        @include bgOfCircle('repair')       
-    }
-
-    &__repairStatus {
-        @include bgOfCircle('checkstatus')    
-    }
 }
 
 .mainContent {
@@ -144,40 +169,18 @@ div.border {
 }
 
 
-.talkLinks.talkLinksInHeader {
-    display: none;
-
-    @media (min-width: 768px) and (max-width: 1120px) {
-        display: flex;
-    }
-}
-
-.talkLinks {
+.contact-links {
     display: flex;
-
-    a {
-        margin-left: 20px;
-    }
-
-    a:first-child {
-        margin-left: 0;
-    }
-
-    &__chat {
-        @include bgOfCircle('chat');
-    }
-
-    &__call {
-        @include bgOfCircle('call');
-    }
-
-    &__profile {
-        @include bgOfCircle('profile');
+    &_header{
+        display: none;
+        @media (min-width: 768px) and (max-width: 1120px) {
+            display: flex;
+        }
     }
 }
 
 
-.contentHeader {
+.content-header {
     align-items: center;
     display: flex;
     flex-wrap: wrap;
@@ -214,8 +217,10 @@ div.border {
     &__linkList {
         display: flex;
         overflow: scroll;
+        padding-top: 2px;
+        padding-bottom: 2px;
         flex: 1 1 100%;
-
+        // overflow Y сделать
         @media (min-width: 1120px) {
             flex-wrap: wrap;
         }
@@ -225,19 +230,26 @@ div.border {
         padding: 8px 20px;
         white-space: nowrap;
         list-style-type: none;
-
+        transition: outline 0.25s, background 0.2s;
+        border-radius: 6px;
+        box-decoration-break: clone;
         a {
             color: #7E7E82;
             text-decoration: none;
         }
+        &:hover{
+            box-decoration-break: clone;
+            background: #FFFFFF;
+            box-shadow: 0px 0px 0px 2px rgba(184,255,236,1);
+        }
     }
 }
 
-.contentHeader__link.selected {
-    background: #FFFFFF;
-    border-radius: 5px;
-    border: 2px solid #B8FFEC;
-}
+// .content-header.selected {
+//     background: #FFFFFF;
+//     border-radius: 5px;
+//     border: 2px solid #B8FFEC;
+// }
 
 
 
