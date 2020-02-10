@@ -20,11 +20,7 @@
         box-shadow: 16px 0px 52px rgba(14, 24, 80, 0.2), -2px 0px 4px rgba(69, 79, 126, 0.02);
         display: none;
     }
-    &__closeButton{
-        @include bgOfCircle('close');
-        margin-right: 16px;
-        @media (min-width: 1120px) {display: none;}
-    }
+
 
     &__header{
         padding-top: 18px;
