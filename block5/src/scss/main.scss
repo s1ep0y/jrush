@@ -287,19 +287,25 @@ body {
         @media (max-width: 768px) {
             padding: 0 16px;
         }
+        
+        div.showtext{
+            max-height: 500px;
+
+        }
 
         div {
+            transition: max-height 0.25s;
             overflow: hidden;
-            height: 160px;
+            max-height: 160px;
             p:first-child{
                 margin-top: 0;
             }
             @media (max-width: 768px) {
-                height: 80px;
+                max-height: 80px;
             }
 
             @media (max-width: 1120px) {
-                height: 160px;
+                max-height: 160px;
             }
         }
     }
@@ -328,6 +334,12 @@ body {
         }
         &:hover{
             color: #7e7e82;
+        }
+        &_hide{
+            display: none;
+            &:before{
+                transform: scaleY(-1);
+            }
         }
     }
 

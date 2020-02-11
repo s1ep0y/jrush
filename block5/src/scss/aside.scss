@@ -9,6 +9,7 @@
     flex-direction: column;
     justify-content: space-between;
     min-width: 272px;
+    width: 272px;
     flex-basis: 272px;
     background: #ffffff;
     &__header{
@@ -79,6 +80,10 @@
         flex: 1 0 100%;
         text-decoration: none;
         color: #1B1C21;
+        transition: color 0.3s;
+        &:hover{
+            color: #7E7E82;
+        }
     }
 
     &__phoneNumber{
@@ -88,6 +93,10 @@
         text-decoration: none;
         color: #1B1C21;
         font-weight: bold;
+        transition: color 0.3s;
+        &:hover{
+            color: #7E7E82;
+        }
     }
     &__languageSelect{
         flex: 1 0 100%;
@@ -116,7 +125,6 @@
         transform: translateX(-360px);
         top: 0;
         left: 0;
-        overflow-y: scroll;
         box-shadow: 16px 0px 52px rgba(14, 24, 80, 0.2), -2px 0px 4px rgba(69, 79, 126, 0.02);
         visibility: hidden;
     }

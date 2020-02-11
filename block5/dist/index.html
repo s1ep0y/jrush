@@ -117,7 +117,7 @@
                 </nav>
                 <div class="about-us">
                     <section class="about-us__text">
-                        <div>
+                        <div id="header-text-control">
                             <p>
                                 Мы являемся авторизованным сервисным центром по ремонту техники Dell. Только у
                                 нас вы можете отремонтировать свой ноутбук Dell с официальной гарантией
@@ -127,9 +127,11 @@
                                 Мы успешно работаем с 1992 года и заслужили репутацию надежного партнера, что
                                 подтверждает большое количество постоянных клиентов. Мы гордимся тем, что к нам
                                 обращаются по рекомендациям и, в свою очередь, советуют нас родным и близким.
+                                
                             </p>
                         </div>
-                        <button class="about-us__read-more" name="read more" onclick="read-more()">Читать далее</button>
+                        <button class="about-us__read-more" id="read-more" name="read more" onclick="showText()">Читать далее</button>
+                        <button class="about-us__read-more about-us__read-more_hide" id="read-less" name="read less" onclick="hideText()">Уменьшить текст</button>
                     </section>
                     <section class="about-us__image">
                         <img src="./img/images/headerImg.jpg" alt="Фотография вывески при входе в офис">
