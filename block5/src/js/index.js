@@ -7,6 +7,14 @@ openMenu= () => {
 
 hideMenu = () => {
     
-    document.getElementById('menu').classList.remove('visible').style.display='none'};
+    document.getElementById('menu').classList.remove('visible');
+};
 
+showText = () =>{
+
+}
+
+hideText = () =>{
+    
+}
 console.log('stop wokr')

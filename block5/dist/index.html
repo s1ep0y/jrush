@@ -9,101 +9,93 @@
 
     <link href="style.css" rel="stylesheet"></head>
     <body>
-        <header class="pageHeader leftPadding rightPadding">
-            <div class="menuSection pageHeader__section">
+        <header class="page-header">
+            <div>
                 <button class="pink-button pink-button_menu" onclick="openMenu()" name="Open-Menu">Открыть меню</button>
-                <div class="border"></div>
+                <div class="page-header__border"></div>
                 <img src="./img/icons/Group.svg" alt="Company logo" class="company-logo company-logo_header">
             </div>
-            <div class="pageHeader__section">
+            <div>
                 <div class="contact-links contact-links_header">
                     <button class="pink-button pink-button_chat" name="chat">Чат</button>
                     <button class="pink-button pink-button_call" name="chat">Звонок</button>
-                    <button class="pink-button pink-button_profile" name="profile">Профиль</button>
-                    
+                    <button class="pink-button pink-button_profile" name="profile">Профиль</button>                    
                 </div>
-                <div class="border"></div>
-                <div class="repairSection">
+                <div class="page-header__border"></div>
+                <div class="repair-block">
                     <button class="pink-button pink-button_repair-request" name="repair-request">Оставить заявку</button>
                     <button class="pink-button pink-button_repair-status" name="repair-status">Статус ремонта</button>
-                
+                </div>
             </div>
-        </div></header>
-
-
+        </header>
 
         <main class="mainContent">
 
-
-            <aside class="sideMenu" id="menu">
-                <div class="sideMenu__header rightPadding">
-                    <div class="sideMenu__leftPart leftPadding">
+            <aside class="side-menu" id="menu">
+                <div class="side-menu__header">
+                    <div>
                         <button class="pink-button pink-button_close" onclick="hideMenu()" name="Close-Menu">Закрыть меню</button>
                         <img src="./img/icons/Group.svg" alt="Company logo" class="company-logo">
                     </div>
-                    <span class="sideMenu__searchButton"><input type="button" value="" name="search" onclick=""></span>
-    
-                    <ul class="sideMenu__list">
-                        <li class="sideMenu__link">
+                    <button class="pink-button pink-button_search" name="search">Поиск</button>
+                </div>
+                    <ul class="side-menu__list">
+                        <li class="side-menu__link">
                             <a href="#">Ремонт техники</a>
                         </li>
-                        <li class="sideMenu__link">
+                        <li class="side-menu__link">
                             <a href="#">Услуги и сервисы</a>
                         </li>
-                        <li class="sideMenu__link">
+                        <li class="side-menu__link">
                             <a href="#">Корпоративным клиентам</a>
                         </li>
-                        <li class="sideMenu__link">
+                        <li class="side-menu__link">
                             <a href="#">Продавцам техники</a>
                         </li>
-                        <li class="sideMenu__link">
+                        <li class="side-menu__link">
                             <a href="#">Партнерам</a>
                         </li>
-                        <li class="sideMenu__link">
+                        <li class="side-menu__link">
                             <a href="#">Производителям</a>
                         </li>
-                        <li class="sideMenu__link">
+                        <li class="side-menu__link">
                             <a href="#">Наши сервисные центры</a>
                         </li>
-                        <li class="sideMenu__link">
+                        <li class="side-menu__link">
                             <a href="#">Контакты</a>
                         </li>
                     </ul>
-                </div>
-                <div class="sideMenu__footer leftPadding">
-                    <div class="talkLinks">
+                
+                <div class="side-menu__footer">
+                    <div class="contact-links contact-links_menu">
                         <button class="pink-button pink-button_chat" name="chat">Чат</button>
                         <button class="pink-button pink-button_call" name="chat">Звонок</button>
                         <button class="pink-button pink-button_profile" name="profile">Профиль</button>
                     </div>
     
-                    <a class="sideMenu__email" href="mailto:mail@cps.com">mail@cps.com</a>
-                    <h2 class="sideMenu__phoneNumber">
-                        <a href="tel:8 800 555 3535">8 800 555 3535</a>
-                    </h2>
-                    <ul class="sideMenu__languageSelect">
-                        <li class="sideMenu__languageItem selected">
+                    <a class="side-menu__email" href="mailto:mail@cps.com">mail@cps.com</a>
+                    <a href="tel:8 800 555 3535" class="side-menu__phoneNumber">8 800 555 3535</a>    
+                    <ul class="side-menu__languageSelect">
+                        <li>
                             <a href="#">RU</a>
                         </li>
-                        <li class="sideMenu__languageItem">
+                        <li>
                             <a href="#">EN</a>
                         </li>
-                        <li class="sideMenu__languageItem">
+                        <li>
                             <a href="#">CH</a>
                         </li>
                     </ul>
                 </div>
             </aside>
+            <div class="content-header">
+                <h1 class="content-header__title">Услуги и сервисы</h1>
+                    <div class="repair-block repair-block_desktop">
+                        <button class="pink-button pink-button_repair-request" name="repair-request">Оставить заявку</button>
+                        <button class="pink-button pink-button_repair-status" name="repair-status">Статус ремонта</button>
 
-
-            <section class="content-header">
-                <h1 class="content-header__title leftPadding">Услуги и сервисы</h1>
-                <section class="repairSection repairSectionDekstop rightPadding">
-                    <a href="#" class="repairSection__makeARequest">Оставить заявку</a>
-                    <a href="#" class="repairSection__repairStatus">Статус ремонта</a>
-                </section>
+                    </div>
                 <nav class="content-header__navigation">
-                    <ul class="content-header__linkList leftPadding">
                         <li class="content-header__link">
                             <a href="#">Ремонтируемые бренды</a>
                         </li>
@@ -122,11 +114,10 @@
                         <li class="content-header__link">
                             <a href="#">Отзывы</a>
                         </li>
-                    </ul>
                 </nav>
-                <section class="whoWeAre">
-                    <section class="whoWeAre__about">
-                        <div class="whoWeAre__text">
+                <div class="about-us">
+                    <section class="about-us__text">
+                        <div>
                             <p>
                                 Мы являемся авторизованным сервисным центром по ремонту техники Dell. Только у
                                 нас вы можете отремонтировать свой ноутбук Dell с официальной гарантией
@@ -138,19 +129,14 @@
                                 обращаются по рекомендациям и, в свою очередь, советуют нас родным и близким.
                             </p>
                         </div>
-    
-                        <a href="#" class="whoWeAre__readMore">Читать далее</a>
+                        <button class="about-us__read-more" name="read more" onclick="read-more()">Читать далее</button>
                     </section>
-                    <section class="whoWeAre__image">
-                        <img src="./img/images/headerImg.jpg" alt="Тут будет картинка">
+                    <section class="about-us__image">
+                        <img src="./img/images/headerImg.jpg" alt="Фотография вывески при входе в офис">
                     </section>
-                </section>
-            </section>
-
-
+                </div>
+            </div>
         </main>
-
-        
 
         <footer></footer>
 

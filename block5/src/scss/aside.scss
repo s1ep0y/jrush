@@ -1,99 +1,72 @@
-@function em($pixels) {
-    @return #{$pixels/16}em
-}
-
 @import "./mixins.scss";
 
-.sideMenu{
-    transition: 0.5s;
+.side-menu{
     z-index: 2;
-    
+    padding-left: 24px;
+    padding-right: 24px;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    min-width: 320px;
-    max-width: 32px;
-    // flex-basis: 320px;
+    min-width: 272px;
+    flex-basis: 272px;
     background: #ffffff;
-    @media (max-width: 1120px) {
-        box-shadow: 16px 0px 52px rgba(14, 24, 80, 0.2), -2px 0px 4px rgba(69, 79, 126, 0.02);
-        display: none;
-    }
-
-
     &__header{
         padding-top: 18px;
         @media (min-width:1120px) {padding-top: 32px;}
-        flex-wrap: wrap;
         display: flex;
         justify-content: space-between;
-    align-items: center;
-    }
-
-    &__leftPart{
-        justify-content: space-between;
+        align-items: center;
+        div{
+            justify-content: space-between;
         display: flex;
         align-items: center;
-    }
-
-    &__searchButton{
-        @include bgOfCircle('search');
-        display: flex;
+        }
     }
 
     &__list{
         padding: 0 0 32px 0;
+        margin-bottom: 0;
     }
-
-   
 
 
 
     &__link{
         position: relative;
-        
-        &::before{
-            opacity: 0;
-            transition: all 0.15s;
-                border-radius: 0px 4px 4px 0;
-                position: absolute;
-                height: 28px;
-                width: 4px;
-                left: 0px;
-                top: -3px;
-                background-color: #41F6D7;
-                content:'';
-        }
-        &:hover{
-            
-            a{
-                
-                color: #7E7E82;
-            }
-            transition: all 0.5s;
-            &::before{
-                
-                opacity: 1;
-
-            }
-        }
-        a{
-            transition: color 0.15s;
-            text-decoration: none;
-            color: #1B1C21;
-        }
-
         font-size: em(16);
         line-height: em(24);
         margin-top: 24px;
         @media (min-width: 1120px) {
             margin-top: 32px;
         }
-
-        padding-left: 24px;
         list-style-type: none;
+        &::before{
+            transition: all 0.25s;
+            opacity: 0;
+            border-radius: 0px 4px 4px 0;
+            position: absolute;
+            height: 28px;
+            width: 4px;
+            left: -24px;
+            top: -3px;
+            background-color: #41F6D7;
+            content:'';
+        }
 
+        &:hover{    
+            a{
+                color: #7E7E82;
+            }
+            transition: all 0.5s;
+            &::before{
+                opacity: 1;
+            }
+        }
+        a{
+            
+            text-decoration: none;
+            color: #1B1C21;
+        }
     }
 
     &__footer{
@@ -112,10 +85,9 @@
         flex: 1 0 100%;
         margin-top: 12px;
         font-size: em(24);
-        a{
-            text-decoration: none;
-            color: #1B1C21;
-        }
+        text-decoration: none;
+        color: #1B1C21;
+        font-weight: bold;
     }
     &__languageSelect{
         flex: 1 0 100%;
@@ -123,27 +95,35 @@
         
         margin-left: 0;
         padding-left: 0;
+        line-height: em(24);
+        font-size: em(16);
+        li{
+        display: inline;
+        }
         a{
             text-decoration: none;
             color: #1B1C21;
+            transition: color 0.3s;
+            &:hover{
+                color: #7e7e82;
+            }
         }
+        
     }
-    &__languageItem{
-        display: inline;
-        line-height: em(24);
-        font-size: em(16);
-    }
-    &__languageItem.selected{
-        a{
-            color: #7e7e82;
-        }
+    @media (max-width: 1120px) {
+        position: absolute;
+        transition: transform 0.5s, visibility 0.7s;
+        transform: translateX(-360px);
+        top: 0;
+        left: 0;
+        overflow-y: scroll;
+        box-shadow: 16px 0px 52px rgba(14, 24, 80, 0.2), -2px 0px 4px rgba(69, 79, 126, 0.02);
+        visibility: hidden;
     }
 }
 
-.sideMenu.visible{
-    display: flex;
-    position: absolute;
-    top: 0;
-    left: 0;
-    overflow-y: scroll;
+.side-menu.visible{
+    transform: translateX(0px);
+    // display: flex;
+    visibility: visible;
 }
