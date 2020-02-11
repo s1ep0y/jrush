@@ -8,9 +8,9 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    min-width: 272px;
-    width: 272px;
-    flex-basis: 272px;
+    box-sizing: border-box;
+    width: 320px;
+    
     background: #ffffff;
     &__header{
         padding-top: 18px;
