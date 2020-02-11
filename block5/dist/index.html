@@ -11,20 +11,20 @@
     <body>
         <header class="page-header">
             <div>
-                <button class="pink-button pink-button_menu" onclick="openMenu()" name="Open-Menu">Открыть меню</button>
+                <button class="pink-button pink-button--icon-img--menu" onclick="openMenu()" name="Open-Menu">Открыть меню</button>
                 <div class="page-header__border"></div>
                 <img src="./img/icons/Group.svg" alt="Company logo" class="company-logo company-logo_header">
             </div>
             <div>
-                <div class="contact-links contact-links_header">
-                    <button class="pink-button pink-button_chat" name="chat">Чат</button>
-                    <button class="pink-button pink-button_call" name="chat">Звонок</button>
-                    <button class="pink-button pink-button_profile" name="profile">Профиль</button>                    
+                <div class="contact-links contact-links--position--header">
+                    <button class="pink-button pink-button--icon-img--chat" name="chat">Чат</button>
+                    <button class="pink-button pink-button--icon-img--call" name="chat">Звонок</button>
+                    <button class="pink-button pink-button--icon-img--profile" name="profile">Профиль</button>                    
                 </div>
                 <div class="page-header__border"></div>
                 <div class="repair-block">
-                    <button class="pink-button pink-button_repair-request" name="repair-request">Оставить заявку</button>
-                    <button class="pink-button pink-button_repair-status" name="repair-status">Статус ремонта</button>
+                    <button class="pink-button pink-button--icon-img--repair-request" name="repair-request">Оставить заявку</button>
+                    <button class="pink-button pink-button--icon-img--repair-status" name="repair-status">Статус ремонта</button>
                 </div>
             </div>
         </header>
@@ -34,10 +34,10 @@
             <aside class="side-menu" id="menu">
                 <div class="side-menu__header">
                     <div>
-                        <button class="pink-button pink-button_close" onclick="hideMenu()" name="Close-Menu">Закрыть меню</button>
+                        <button class="pink-button pink-button--icon-img--close" onclick="hideMenu()" name="Close-Menu">Закрыть меню</button>
                         <img src="./img/icons/Group.svg" alt="Company logo" class="company-logo">
                     </div>
-                    <button class="pink-button pink-button_search" name="search">Поиск</button>
+                    <button class="pink-button pink-button--icon-img--search" name="search">Поиск</button>
                 </div>
                     <ul class="side-menu__list">
                         <li class="side-menu__link">
@@ -67,10 +67,10 @@
                     </ul>
                 
                 <div class="side-menu__footer">
-                    <div class="contact-links contact-links_menu">
-                        <button class="pink-button pink-button_chat" name="chat">Чат</button>
-                        <button class="pink-button pink-button_call" name="chat">Звонок</button>
-                        <button class="pink-button pink-button_profile" name="profile">Профиль</button>
+                    <div class="contact-links contact-links--position--menu">
+                        <button class="pink-button pink-button--icon-img--chat" name="chat">Чат</button>
+                        <button class="pink-button pink-button--icon-img--call" name="chat">Звонок</button>
+                        <button class="pink-button pink-button--icon-img--profile" name="profile">Профиль</button>
                     </div>
     
                     <a class="side-menu__email" href="mailto:mail@cps.com">mail@cps.com</a>
@@ -90,9 +90,9 @@
             </aside>
             <div class="content-header">
                 <h1 class="content-header__title">Услуги и сервисы</h1>
-                    <div class="repair-block repair-block_desktop">
-                        <button class="pink-button pink-button_repair-request" name="repair-request">Оставить заявку</button>
-                        <button class="pink-button pink-button_repair-status" name="repair-status">Статус ремонта</button>
+                    <div class="repair-block repair-block--position--desktop">
+                        <button class="pink-button pink-button--icon-img--repair-request" name="repair-request">Оставить заявку</button>
+                        <button class="pink-button pink-button--icon-img--repair-status" name="repair-status">Статус ремонта</button>
 
                     </div>
                 <nav class="content-header__navigation">
@@ -133,7 +133,7 @@
                             </p>
                         </div>
                         <button class="about-us__read-more" id="read-more" name="read more" onclick="showText()">Читать далее</button>
-                        <button class="about-us__read-more about-us__read-more_hide" id="read-less" name="read less" onclick="hideText()">Уменьшить текст</button>
+                        <button class="about-us__read-more about-us__read-more--display--hide" id="read-less" name="read less" onclick="hideText()">Уменьшить текст</button>
                     </section>
                     <section class="about-us__image">
                         <img src="./img/images/headerImg.jpg" alt="Фотография вывески при входе в офис">
