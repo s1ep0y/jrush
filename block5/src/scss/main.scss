@@ -23,6 +23,9 @@ body {
     }
 }
 
+
+
+
 .pink-button {
     border-radius: 50%;
     width: 40px;
@@ -191,7 +194,7 @@ body {
     @media (min-width:1120px) {
         padding-top: 42px;
         justify-content: space-between;
-        flex: 1 1 50%;
+        // flex: 1 1 50%;
         align-content: flex-start;
     }
 
@@ -316,9 +319,23 @@ body {
             }
         }
     }
+    &__image {
+        img {
+            max-width: 100%;
+            box-sizing: border-box;
+            border: 1px solid #9ed1af;
 
-    &__read-more {
-        font-size: em(16);
+            @media (min-width: 768px) {
+                border-radius: 6px;
+            }
+        }
+    }
+}
+
+
+.show-hide-buttons {
+    &__read-more, &__read-less
+        {font-size: em(16);
         line-height: em(24);
         margin-bottom: 16px;
         margin-top: 16px;
@@ -349,24 +366,120 @@ body {
                 transform: scaleY(-1);
             }
         }
+        }}
+    
+    
+}
+
+div.content{
+    display: flex;
+    flex-direction: column;
+}
+
+
+.which-brand-repair{
+    background: #F2F2F2;
+
+    @media (min-width:768px){
+        @include responsiveWrap();
+    }
+    &__title{
+        font-size: em(16);
+        line-height: 24px;
+        text-transform: uppercase;
+        font-weight: normal;
+        @media (max-width: 768px){
+            background-image: linear-gradient(270deg, #F8F8F8 0%, #FFFFFF 98.61%);
+            padding: 16px;
         }
-        
+    }
+    &__list{
+        &--display{
+            &--not-mobile{
+                @media (max-width: 768px) {
+                    display: none;
+                }
+                overflow: hidden;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                transition: max-height 0.4s ease-in-out;
+                max-height: 170px;
+            }
+            &--mobile{
+                margin-left: 16px;
+                @media (min-width: 768px) {
+                    display: none;
+                }
+                .swiper-slide{
+                    width: 240px;
+                }
+                .swiper-wrapper{
+                    max-width: 92vw;
+                }
+                .swiper-pagination{
+                    position: relative;
+                    &-bullet{
+                        background: #DDDDDD;
+                        opacity: 1;
+                        &-active{
+                            background: #B5B6BC;
+                        }
+                    }
+                }
+            }
+        }
     }
 
-    &__image {
-
-
-        img {
-            max-width: 100%;
-            box-sizing: border-box;
-            border: 1px solid #9ed1af;
-
-            @media (min-width: 768px) {
-                border-radius: 6px;
+    &__list-item{
+        margin-bottom: 16px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 72px;
+        padding-left: 16px;
+        padding-right: 16px;
+        border-radius: 6px;
+        background-color: #FFFFFF;
+        border: 1px solid #EAEAEA;
+        box-sizing: border-box;
+        position: relative;
+        min-width: 224px;
+        flex-basis: 33%;
+        &::before{
+            transition: transform 0.3s;
+            background-image: url('./../img/icons/arrowright.svg');
+            background-repeat: no-repeat;
+            background-position: center center;
+            content: '';
+            position: absolute;
+            width: 40px;
+            height: 40px;
+            border: 2px solid #ff3e79;
+            right: 16px;
+            border-radius: 50%;
+        }
+        &:hover{
+            &::before{
+                transform: scale(1.1);
             }
+        }
+        @media (max-width: 768px) {
+            flex-basis: auto;
+            width: 240px;
+        }
+        @media (min-width: 1120px){
+            min-width: 240px;
+            flex-basis: 24%;
+        }
+    }
+    &__show-hide-buttons{
+        @media (max-width: 768px) {
+            display: none;
         }
     }
 }
 
-
-//after import
+.showfulldiv{
+    max-height: 600px !important;
+}

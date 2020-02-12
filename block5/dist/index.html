@@ -4,7 +4,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width,initial-scale=1">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
-
+        <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
         <title>homework</title>
 
     <link href="style.css" rel="stylesheet"></head>
@@ -88,6 +88,9 @@
                     </ul>
                 </div>
             </aside>
+
+            <div class="content">
+
             <div class="content-header">
                 <h1 class="content-header__title">Услуги и сервисы</h1>
                     <div class="repair-block repair-block--position--desktop">
@@ -117,7 +120,7 @@
                 </nav>
                 <div class="about-us">
                     <section class="about-us__text">
-                        <div id="header-text-control">
+                        <div>
                             <p>
                                 Мы являемся авторизованным сервисным центром по ремонту техники Dell. Только у
                                 нас вы можете отремонтировать свой ноутбук Dell с официальной гарантией
@@ -132,17 +135,116 @@
                                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus odit atque dicta maiores minus aut aliquid quam laborum, ad obcaecati quis nemo nulla minima quas, quos perspiciatis alias, temporibus saepe.
                             </p>
                         </div>
-                        <button class="about-us__read-more" id="read-more" name="read more" onclick="showText()">Читать далее</button>
-                        <button class="about-us__read-more about-us__read-more--display--hide" id="read-less" name="read less" onclick="hideText()">Уменьшить текст</button>
+                        <div class="show-hide-buttons">
+                            <button class="show-hide-buttons__read-more" name="read-more">Читать далее</button>
+                            <button class="show-hide-buttons__read-less show-hide-buttons__read-more--display--hide allahg" name="read-less">Скрыть</button>
+                        </div>
+                        
                     </section>
                     <section class="about-us__image">
-                        <img src="./img/images/headerImg.jpg" alt="Фотография вывески при входе в офис">
+                        <img src="./img/logos/headerImg.jpg" alt="Фотография вывески при входе в офис">
                     </section>
                 </div>
+
             </div>
+            <div class="which-brand-repair">
+                <h3 class="which-brand-repair__title">
+                    ремонт техники различных брендов
+                </h3>
+                <div class="which-brand-repair__list which-brand-repair__list--display--not-mobile">
+                    <a href="#" class="which-brand-repair__list-item">
+                        <img src="./img/logos/lenovologo.jpg" alt="lenovo logo" class="which-brand-repair__logo">
+                    </a>
+                    <a href="#" class="which-brand-repair__list-item">
+                        <img src="./img/logos/samsunglogo.jpg" alt="lenovo logo" class="which-brand-repair__logo">
+                    </a>
+                    <a href="#" class="which-brand-repair__list-item">
+                        <img src="./img/logos/applelogo.jpg" alt="lenovo logo" class="which-brand-repair__logo">
+                    </a>
+                    <a href="#" class="which-brand-repair__list-item">
+                        <img src="./img/logos/viewsoniclogo.jpg" alt="lenovo logo" class="which-brand-repair__logo">
+                    </a>
+                    <a href="#" class="which-brand-repair__list-item">
+                        <img src="./img/logos/boschlogo.jpg" alt="lenovo logo" class="which-brand-repair__logo">
+                    </a>
+                    <a href="#" class="which-brand-repair__list-item">
+                        <img src="./img/logos/hplogo.jpg" alt="lenovo logo" class="which-brand-repair__logo">
+                    </a>
+                    <a href="#" class="which-brand-repair__list-item">
+                        <img src="./img/logos/acerlogo.png" alt="lenovo logo" class="which-brand-repair__logo">
+                    </a>
+                    <a href="#" class="which-brand-repair__list-item">
+                        <img src="./img/logos/sonylogo.jpg" alt="lenovo logo" class="which-brand-repair__logo">
+                    </a>
+                    <a href="#" class="which-brand-repair__list-item">
+                        <img src="./img/logos/lenovologo.jpg" alt="lenovo logo" class="which-brand-repair__logo">
+                    </a>
+                    <a href="#" class="which-brand-repair__list-item">
+                        <img src="./img/logos/lenovologo.jpg" alt="lenovo logo" class="which-brand-repair__logo">
+                    </a>
+                    <a href="#" class="which-brand-repair__list-item">
+                        <img src="./img/logos/samsunglogo.jpg" alt="lenovo logo" class="which-brand-repair__logo">
+                    </a>
+                    <a href="#" class="which-brand-repair__list-item">
+                        <img src="./img/logos/applelogo.jpg" alt="lenovo logo" class="which-brand-repair__logo">
+                    </a>
+                </div>
+                <div class="show-hide-buttons which-brand-repair__show-hide-buttons">
+                    <button class="show-hide-buttons__read-more" name="read more">Читать далее</button>
+                    <button class="show-hide-buttons__read-less show-hide-buttons__read-more--display--hide" name="read-less">Скрыть</button>
+                </div>
+
+
+                <div class="which-brand-repair__list which-brand-repair__list--display--mobile">
+                    <div class="swiper-container">
+                        <div class="swiper-wrapper">
+                            <a href="#" class="which-brand-repair__list-item swiper-slide">
+                                <img src="./img/logos/lenovologo.jpg" alt="lenovo logo" class="which-brand-repair__logo">
+                            </a>
+                            <a href="#" class="which-brand-repair__list-item swiper-slide">
+                                <img src="./img/logos/samsunglogo.jpg" alt="lenovo logo" class="which-brand-repair__logo">
+                            </a>
+                            <a href="#" class="which-brand-repair__list-item swiper-slide">
+                                <img src="./img/logos/applelogo.jpg" alt="lenovo logo" class="which-brand-repair__logo">
+                            </a>
+                            <a href="#" class="which-brand-repair__list-item swiper-slide">
+                                <img src="./img/logos/viewsoniclogo.jpg" alt="lenovo logo" class="which-brand-repair__logo">
+                            </a>
+                            <a href="#" class="which-brand-repair__list-item swiper-slide">
+                                <img src="./img/logos/boschlogo.jpg" alt="lenovo logo" class="which-brand-repair__logo">
+                            </a>
+                            <a href="#" class="which-brand-repair__list-item swiper-slide">
+                                <img src="./img/logos/hplogo.jpg" alt="lenovo logo" class="which-brand-repair__logo">
+                            </a>
+                            <a href="#" class="which-brand-repair__list-item swiper-slide">
+                                <img src="./img/logos/acerlogo.png" alt="lenovo logo" class="which-brand-repair__logo">
+                            </a>
+                            <a href="#" class="which-brand-repair__list-item swiper-slide">
+                                <img src="./img/logos/sonylogo.jpg" alt="lenovo logo" class="which-brand-repair__logo">
+                            </a>
+                            <a href="#" class="which-brand-repair__list-item swiper-slide">
+                                <img src="./img/logos/lenovologo.jpg" alt="lenovo logo" class="which-brand-repair__logo">
+                            </a>
+                            <a href="#" class="which-brand-repair__list-item swiper-slide">
+                                <img src="./img/logos/lenovologo.jpg" alt="lenovo logo" class="which-brand-repair__logo">
+                            </a>
+                            <a href="#" class="which-brand-repair__list-item swiper-slide">
+                                <img src="./img/logos/samsunglogo.jpg" alt="lenovo logo" class="which-brand-repair__logo">
+                            </a>
+                            <a href="#" class="which-brand-repair__list-item swiper-slide">
+                                <img src="./img/logos/applelogo.jpg" alt="lenovo logo" class="which-brand-repair__logo">
+                            </a>
+                            
+                        </div>
+                        <div class="swiper-pagination"></div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
         </main>
 
         <footer></footer>
-
+        <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
     <script type="text/javascript" src="bundle.js"></script></body>
 </html>

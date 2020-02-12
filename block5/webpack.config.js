@@ -3,6 +3,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 
+
 module.exports = {
     entry: './src/app.js',
     output: {
@@ -41,7 +42,7 @@ module.exports = {
                 test: /\.(svg|png|jpg|jpeg|webp)$/,
                 use: [
                     {
-                        loader: 'file-loader?name=./static/[name].[ext]'
+                        loader: 'file-loader?name=./img/[name].[ext]'
                     }
                 ]
             }, {

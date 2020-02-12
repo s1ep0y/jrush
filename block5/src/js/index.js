@@ -1,5 +1,3 @@
-console.log('works here heeh')
-
 openMenu= () => {
     
     document.getElementById('menu').classList.add('visible');
@@ -10,14 +8,28 @@ hideMenu = () => {
     document.getElementById('menu').classList.remove('visible');
 };
 
-showText = () =>{
-    document.getElementById('header-text-control').classList.add('showtext');
-    document.getElementById('read-more').style.display='none';
-    document.getElementById('read-less').style.display='flex';
-}
+document.querySelectorAll('.show-hide-buttons').forEach(item=>{
+    const change = item.previousElementSibling
+    const open = item.querySelectorAll('button:first-child')[0];
+    const close = item.querySelectorAll('button:last-child')[0]
+    open.addEventListener('click', function(){
+        change.classList.add('showfulldiv');
+        open.style.display='none';
+        close.style.display='flex';
+    })
+    close.addEventListener('click', function(){
+        change.classList.remove('showfulldiv');
+        open.style.display='flex';
+        close.style.display='none';
+    })
+})
 
-hideText = () =>{
-    document.getElementById('header-text-control').classList.remove('showtext');
-    document.getElementById('read-less').style.display='none';
-    document.getElementById('read-more').style.display='flex';
-}
+let swiper =  new Swiper ('.swiper-container',{
+    slidesPerView: 'auto',
+    spaceBetween: 16,
+    // freeMode: true,
+    pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+  });
