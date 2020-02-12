@@ -17,7 +17,7 @@ body {
     &_header {
         margin-left: 20px;
 
-        @media (min-width: 768px) and (max-width: 1120px) {
+        @media (min-width: 768px) and (max-width: 1119px) {
             margin-left: 0;
         }
     }
@@ -98,13 +98,13 @@ body {
         justify-content: space-between;
 
         &:last-child .page-header__border {
-            @media (max-width: 1120px) {
+            @media (max-width: 1119px) {
                 display: flex;
             }
         }
 
         &:first-child .page-header__border {
-            @media (min-width: 768px) and (max-width: 1120px) {
+            @media (min-width: 768px) and (max-width: 1119px) {
                 display: flex;
             }
         }
@@ -170,7 +170,7 @@ body {
     display: none;
     &--position{
         &--header {
-            @media (min-width: 768px) and (max-width: 1120px) {
+            @media (min-width: 768px) and (max-width: 1119px) {
                 display: flex;
             }
         }
@@ -212,11 +212,11 @@ body {
             background-color: #41F6D7;
             content: '';
 
-            @media (max-width: 768px) {
+            @media (max-width: 767px) {
                 left: -16px;
             }
 
-            @media (min-width: 768px) and (max-width: 1120px) {
+            @media (min-width: 768px) and (max-width: 1119px) {
                 left: -24px;
             }
 
@@ -232,12 +232,12 @@ body {
         padding: 2px;
         flex: 1 1 100%;
 
-        @media (max-width: 768px) {
+        @media (max-width: 767px) {
             margin-bottom: 24px;
             margin-top: 24px;
         }
 
-        @media (min-width: 768px) and (max-width: 1120px) {
+        @media (min-width: 768px) and (max-width: 1119px) {
             margin-bottom: 32px;
             margin-top: 32px;
         }
@@ -275,7 +275,7 @@ body {
     justify-content: space-between;
     flex: 1 1 100%;
 
-    @media (max-width: 768px) {
+    @media (max-width: 767px) {
         flex-wrap: wrap;
     }
 
@@ -294,7 +294,7 @@ body {
         font-size: em(14);
         line-height: em(20);
 
-        @media (max-width: 768px) {
+        @media (max-width: 767px) {
             padding: 0 16px;
         }
         
@@ -310,11 +310,11 @@ body {
             p:first-child{
                 margin-top: 0;
             }
-            @media (max-width: 768px) {
+            @media (max-width: 767px) {
                 max-height: 80px;
             }
 
-            @media (max-width: 1120px) {
+            @media (max-width: 1119px) {
                 max-height: 160px;
             }
         }
@@ -388,7 +388,7 @@ div.content{
         line-height: 24px;
         text-transform: uppercase;
         font-weight: normal;
-        @media (max-width: 768px){
+        @media (max-width: 767px){
             background-image: linear-gradient(270deg, #F8F8F8 0%, #FFFFFF 98.61%);
             padding: 16px;
         }
@@ -396,7 +396,7 @@ div.content{
     &__list{
         &--display{
             &--not-mobile{
-                @media (max-width: 768px) {
+                @media (max-width: 767px) {
                     display: none;
                 }
                 overflow: hidden;
@@ -464,7 +464,7 @@ div.content{
                 transform: scale(1.1);
             }
         }
-        @media (max-width: 768px) {
+        @media (max-width: 767px) {
             flex-basis: auto;
             width: 240px;
         }
@@ -474,7 +474,7 @@ div.content{
         }
     }
     &__show-hide-buttons{
-        @media (max-width: 768px) {
+        @media (max-width: 767px) {
             display: none;
         }
     }

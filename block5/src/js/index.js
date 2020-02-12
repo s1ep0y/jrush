@@ -27,7 +27,10 @@ document.querySelectorAll('.show-hide-buttons').forEach(item=>{
 let swiper =  new Swiper ('.swiper-container',{
     slidesPerView: 'auto',
     spaceBetween: 16,
-    // freeMode: true,
+    autoplay: {
+        delay: 2000,
+    },
+    loop: true,
     pagination: {
         el: '.swiper-pagination',
         clickable: true,
