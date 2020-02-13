@@ -28,6 +28,7 @@ var isSwiperWork = undefined;
 
 function sliderControl(target){
     console.log(isSwiperWork)
+    // todo - заставить эту херню нормально удаляться. Шел второй час
     if(window.innerWidth < 768){
         isSwiperWork = true;
         document.querySelectorAll(`.${target}__container`).forEach(elem=>{
