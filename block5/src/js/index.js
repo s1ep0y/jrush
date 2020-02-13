@@ -4,7 +4,6 @@ openMenu= () => {
 };
 
 hideMenu = () => {
-    
     document.getElementById('menu').classList.remove('visible');
 };
 
@@ -24,15 +23,47 @@ document.querySelectorAll('.show-hide-buttons').forEach(item=>{
     })
 })
 
-let swiper =  new Swiper ('.swiper-container',{
-    slidesPerView: 'auto',
-    spaceBetween: 16,
-    autoplay: {
-        delay: 2000,
-    },
-    loop: true,
-    pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
-      },
+
+
+
+function sliderControl(target){
+    
+    if(window.innerWidth < 768){
+        
+        document.querySelectorAll(`.${target}__container`).forEach(elem=>{
+            elem.classList.add('swiper-container')
+        })
+        document.querySelectorAll(`.${target}__wrapper`).forEach(elem=>{
+            elem.classList.add('swiper-wrapper')
+        })
+        
+        document.querySelectorAll(`.${target}__list-item`).forEach(element => {
+        element.classList.add('swiper-slide')
+        });
+        var init = true
+            swiper = new Swiper ('.swiper-container',{
+            slidesPerView: 'auto',
+            spaceBetween: 16,
+            // autoplay: {
+            //     delay: 2000,
+            // },
+            loop: true,
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+        });
+
+    }
+    else{
+        if(init){
+            
+        }
+    }
+
+}
+
+window.onload = sliderControl('content-body')
+window.addEventListener('resize', function(){
+    sliderControl('content-body')
   });

@@ -18,3 +18,39 @@
 @function em($pixels) {
     @return #{$pixels/16}em
 }
+
+@function color($name){
+    @if $name=='pink'{
+        @return(#ff3e79)
+    }
+    @if $name=='white'{
+        @return(#FFFFFF)
+    }
+    @if $name=='bright-gray'{
+        @return(#EAEAEA)
+    }
+    @if $name=='white-smoke-darker'{
+        @return(#F8F8F8)
+    }
+    @if $name=='white-smoke-lighter'{
+        @return(#F2F2F2)
+    }
+    @if $name=='turquoise'{
+        @return(#41F6D7)
+    }
+    @if $name=='storm-grey'{
+        @return(#7E7E82)
+    }
+    @if $name=='black-russian'{
+        @return(#1B1C21)
+    }
+    @if $name=='gainsboro'{
+        @return(#DDDDDD)
+    }
+    @if $name=='ghost'{
+        @return(#B5B6BC)
+    }
+    // @if $name==''{
+    //     @return(#)
+    // }
+}

@@ -4,18 +4,7 @@
     font-weight: bold;
     font-style: normal;
 }
-@font-face {
-    font-family: 'TT Lakes';
-    src: local('TT Lakes DemiBold'), local('TTLakes-DemiBold'), url("TTLakes-DemiBold.woff") format('woff');
-    font-weight: 600;
-    font-style: normal;
-}
-@font-face {
-    font-family: 'TT Lakes';
-    src: local('TT Lakes Black'), local('TTLakes-Black'), url("TTLakes-Black.woff") format('woff');
-    font-weight: 900;
-    font-style: normal;
-}
+
 
 @font-face {
     font-family: 'TT Lakes';
@@ -30,9 +19,4 @@
     font-style: normal;
 }
 
-@font-face {
-    font-family: 'TT Lakes';
-    src: local('TT Lakes ExtraBold'), local('TTLakes-ExtraBold'), url("TTLakes-ExtraBold.woff") format('woff');
-    font-weight: 800;
-    font-style: normal;
-}
+

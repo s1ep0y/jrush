@@ -4,13 +4,12 @@
 
 //px to em
 
-
 body {
     font-family: 'TT Lakes';
 }
 
 .company-logo {
-    background-image: url('./../img/icons/Group.svg');
+    background-image: url("./../img/icons/Group.svg");
     width: 96px;
     height: 50px;
 
@@ -23,64 +22,83 @@ body {
     }
 }
 
-
-
-
-.pink-button {
-    border-radius: 50%;
+.circle-fill-button {
     width: 40px;
     height: 40px;
-    background-color: #ff3e79;
-    background-repeat: no-repeat;
-    background-position: center;
     font-size: 0;
     border: none;
-    &--icon-img{
+    position: relative;
+    background: none;
+    &::before{
+        content:'';
+        position: absolute;
+        right: 0;
+        top: 0;
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+        background-color: color('pink');
+        background-repeat: no-repeat;
+        background-position: center;
+        border: none;
+        z-index: 0;
+    }
+    &--icon-img {
         &--menu {
-            background-image: url('./../img/icons/burger.svg');
+            &::before{background-image: url("./../img/icons/burger.svg");}
+            
             @media (min-width: 1120px) {
                 display: none;
             }
         }
         &--chat {
-            background-image: url('./../img/icons/chat.svg');
+            &::before{background-image: url("./../img/icons/chat.svg");}
+            
         }
-    
+
         &--call {
-            background-image: url('./../img/icons/call.svg');
+            &::before{background-image: url("./../img/icons/call.svg");}
+            
             margin: 0 20px;
         }
-    
+
         &--profile {
-            background-image: url('./../img/icons/profile.svg');
+            &::before{background-image: url("./../img/icons/profile.svg");}
+            
         }
-    
+
         &--repair-request {
-            background-image: url('./../img/icons/repair.svg');
+            &::before{background-image: url("./../img/icons/repair.svg");}
+            
             margin-right: 20px;
         }
-    
+
         &--repair-status {
-            background-image: url('./../img/icons/checkstatus.svg');
+            &::before{
+                background-image: url("./../img/icons/checkstatus.svg");    
+            }
+            
         }
-    
+
         &--search {
-            background-image: url('./../img/icons/search.svg');
+            &::before{
+                background-image: url("./../img/icons/search.svg");
+            }
+            
         }
-    
-    
+
         &--close {
-            background-image: url('./../img/icons/close.svg');
+            &::before{background-image: url("./../img/icons/close.svg");}
+            
             margin-right: 16px;
-    
+
             @media (min-width: 1120px) {
                 display: none;
             }
         }
     }
-    
-    transition: transform 0.3s;
 
+    transition: transform 0.3s;
     &:hover {
         transform: scale(1.1);
     }
@@ -92,7 +110,7 @@ body {
         display: none;
     }
 
-    &>div {
+    & > div {
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -110,13 +128,13 @@ body {
         }
     }
 
-    &__border{
+    &__border {
         display: none;
         height: 30px;
         margin: 0 20px;
-        border: 1px solid #EAEAEA;
+        border: 1px solid color('bright-gray');
     }
-    background-color: #FFFFFF;
+    background-color: color('white');
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -128,60 +146,45 @@ body {
 .repair-block {
     display: flex;
     justify-content: space-between;
-    font-size: 0;
-    &--position{
-        &--desktop
-        {
+    &__circle-fill-button{
+        @media (min-width:1120px) {
+            font-size: em(16);
+            padding-right: 48px;
+            width: auto;
+        }
+        
+    }
+    &--position {
+        &--desktop {
             display: none;
-            button:before{
-                font-size: 16px;
-                color: black;
-                white-space: nowrap;
-                position: relative;
-            }
-            button:first-child{
-                margin-right: 160px;
-                &:before{
-                    content: 'Оставить заявку';
-                    right: 143px;
-                    }
-            }
-            button:last-child:before{
-                content: 'Статус ремонта';
-                right: 137px;
-                }
             @media (min-width:1120px) {
                 display: flex;
             }
+        }
     }
-    }
-   
+
 }
 
 .mainContent {
     @media (min-width: 1120px) {
         display: flex;
     }
-
 }
-
 
 .contact-links {
     display: none;
-    &--position{
+    &--position {
         &--header {
             @media (min-width: 768px) and (max-width: 1119px) {
                 display: flex;
             }
         }
-        &--menu{
+        &--menu {
             display: flex;
         }
     }
 
-    
 }
-
 
 .content-header {
     @include responsiveWrap();
@@ -189,7 +192,7 @@ body {
     display: flex;
     flex-wrap: wrap;
     padding-top: 24px;
-    background-color: #F8F8F8;
+    background-color: color('white-smoke-darker');
 
     @media (min-width:1120px) {
         padding-top: 42px;
@@ -204,12 +207,12 @@ body {
         position: relative;
 
         &::before {
-            border-radius: 0px 4px 4px 0;
+            border-radius: 0 4px 4px 0;
             position: absolute;
             height: 40px;
             width: 4px;
             top: -4px;
-            background-color: #41F6D7;
+            background-color: color('turquoise');
             content: '';
 
             @media (max-width: 767px) {
@@ -257,17 +260,16 @@ body {
 
         a {
             white-space: nowrap;
-            color: #7E7E82;
+            color: color('storm-grey');
             text-decoration: none;
         }
 
         &:hover {
-            background: #FFFFFF;
-            box-shadow: 0px 0px 0px 2px rgba(184, 255, 236, 1);
+            background: color('white');
+            box-shadow: 0 0 0 2px rgba(184, 255, 236, 1);
         }
     }
 }
-
 
 .about-us {
     display: flex;
@@ -281,8 +283,8 @@ body {
 
     @media (min-width: 768px) {
         justify-content: space-between;
-        &__text,
-        &__image {
+        &__image,
+        &__text {
             flex: 0 0 45%;
             flex-wrap: nowrap;
         }
@@ -290,15 +292,15 @@ body {
     }
 
     &__text {
-        color: #1B1C21;
+        color: color('black-russian');
         font-size: em(14);
         line-height: em(20);
 
         @media (max-width: 767px) {
             padding: 0 16px;
         }
-        
-        div.showtext{
+
+        div.showtext {
             max-height: 500px;
 
         }
@@ -307,7 +309,7 @@ body {
             transition: max-height 0.25s;
             overflow: hidden;
             max-height: 160px;
-            p:first-child{
+            p:first-child {
                 margin-top: 0;
             }
             @media (max-width: 767px) {
@@ -332,10 +334,10 @@ body {
     }
 }
 
-
 .show-hide-buttons {
-    &__read-more, &__read-less
-        {font-size: em(16);
+    &__read-less,
+    &__read-more {
+        font-size: em(16);
         line-height: em(24);
         margin-bottom: 16px;
         margin-top: 16px;
@@ -343,7 +345,7 @@ body {
         border: none;
         background: none;
         text-decoration: none;
-        color: #1B1C21;
+        color: color('black-russian');
         margin-left: 8px;
         display: flex;
         transition: color 0.3s;
@@ -353,85 +355,91 @@ body {
             width: 8px;
             height: 11px;
             content: ' ';
-            background-image: url('./../img/icons/double_arrow_down.svg');
+            background-image: url("./../img/icons/double_arrow_down.svg");
             background-repeat: no-repeat;
         }
-        &:hover{
-            color: #7e7e82;
+        &:hover {
+            color: color('storm-grey');
         }
-        &--display{
-            &--hide{
-            display: none;
-            &:before{
-                transform: scaleY(-1);
+        &--display {
+            &--hide {
+                display: none;
+                &:before {
+                    transform: scaleY(-1);
+                }
             }
         }
-        }}
-    
-    
+    }
+
 }
 
-div.content{
+div.content {
     display: flex;
     flex-direction: column;
 }
 
+.content-body{
 
-.which-brand-repair{
-    background: #F2F2F2;
-
-    @media (min-width:768px){
+    background: color('white-smoke-lighter');
+    @media (min-width:768px) {
         @include responsiveWrap();
     }
-    &__title{
+    &__title {
         font-size: em(16);
         line-height: 24px;
         text-transform: uppercase;
         font-weight: normal;
-        @media (max-width: 767px){
+        @media (max-width: 767px) {
             background-image: linear-gradient(270deg, #F8F8F8 0%, #FFFFFF 98.61%);
             padding: 16px;
         }
     }
-    &__list{
-        &--display{
-            &--not-mobile{
-                @media (max-width: 767px) {
-                    display: none;
-                }
-                overflow: hidden;
-                display: flex;
-                flex-wrap: wrap;
-                justify-content: space-between;
-                transition: max-height 0.4s ease-in-out;
-                max-height: 170px;
+
+
+    &__container {
+        margin-left: 16px;
+        @media (max-width: 767px) {
+            .swiper-slide {
+                width: 240px;
             }
-            &--mobile{
-                margin-left: 16px;
-                @media (min-width: 768px) {
-                    display: none;
-                }
-                .swiper-slide{
-                    width: 240px;
-                }
-                .swiper-wrapper{
-                    max-width: 92vw;
-                }
-                .swiper-pagination{
-                    position: relative;
-                    &-bullet{
-                        background: #DDDDDD;
-                        opacity: 1;
-                        &-active{
-                            background: #B5B6BC;
-                        }
+            .swiper-wrapper {
+                max-width: 92vw;
+            }
+            .swiper-pagination {
+                position: relative;
+                &-bullet {
+                    background: color('gainsboro') !important;
+                    opacity: 1;
+                    &-active {
+                        background: color('ghost') !important;
                     }
                 }
             }
         }
+        @media (min-width: 768px) {
+            transition: max-height 0.4s ease-in-out;
+            overflow: hidden;
+            max-height: 170px;
+            margin-left: 0;
+            .swiper-pagination{
+                display: none;
+            }
+        }
     }
 
-    &__list-item{
+    &__wrapper{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        @media (max-width: 767px) {
+            flex-wrap: nowrap;
+            padding-bottom: 28px;
+            padding-left: 16px;
+        }
+    }
+    
+
+    &__list-item {
         margin-bottom: 16px;
         display: flex;
         justify-content: space-between;
@@ -440,15 +448,15 @@ div.content{
         padding-left: 16px;
         padding-right: 16px;
         border-radius: 6px;
-        background-color: #FFFFFF;
-        border: 1px solid #EAEAEA;
+        background-color: color('white');
+        border: 1px solid color('bright-gray');
         box-sizing: border-box;
         position: relative;
         min-width: 224px;
         flex-basis: 33%;
-        &::before{
+        &::before {
             transition: transform 0.3s;
-            background-image: url('./../img/icons/arrowright.svg');
+            background-image: url("./../img/icons/arrowright.svg");
             background-repeat: no-repeat;
             background-position: center center;
             content: '';
@@ -459,8 +467,8 @@ div.content{
             right: 16px;
             border-radius: 50%;
         }
-        &:hover{
-            &::before{
+        &:hover {
+            &::before {
                 transform: scale(1.1);
             }
         }
@@ -468,18 +476,21 @@ div.content{
             flex-basis: auto;
             width: 240px;
         }
-        @media (min-width: 1120px){
+        @media (min-width: 1120px) {
             min-width: 240px;
             flex-basis: 24%;
         }
     }
-    &__show-hide-buttons{
+    &__show-hide-buttons {
         @media (max-width: 767px) {
             display: none;
         }
     }
 }
 
-.showfulldiv{
+.which-brand-repair {
+}
+
+.showfulldiv {
     max-height: 600px !important;
 }
