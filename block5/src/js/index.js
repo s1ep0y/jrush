@@ -24,12 +24,12 @@ document.querySelectorAll('.show-hide-buttons').forEach(item=>{
 })
 
 
-
+var isSwiperWork = undefined;
 
 function sliderControl(target){
-    
+    console.log(isSwiperWork)
     if(window.innerWidth < 768){
-        
+        isSwiperWork = true;
         document.querySelectorAll(`.${target}__container`).forEach(elem=>{
             elem.classList.add('swiper-container')
         })
@@ -40,27 +40,38 @@ function sliderControl(target){
         document.querySelectorAll(`.${target}__list-item`).forEach(element => {
         element.classList.add('swiper-slide')
         });
-        var init = true
-            swiper = new Swiper ('.swiper-container',{
+        
+            let mySwiper = new Swiper ('.swiper-container',{
             slidesPerView: 'auto',
             spaceBetween: 16,
-            // autoplay: {
-            //     delay: 2000,
-            // },
+            autoplay: {
+                delay: 2000,
+            },
             loop: true,
             pagination: {
                 el: '.swiper-pagination',
                 clickable: true,
             },
         });
-
+        return
     }
-    else{
-        if(init){
+    
+        if(isSwiperWork){
+            let mySwiper = document.querySelector('.swiper-container').swiper;
+            mySwiper.destroy(true, true);
+            document.querySelectorAll(`.${target}__container`).forEach(elem=>{
+                elem.classList.remove('swiper-container')
+            })
+            document.querySelectorAll(`.${target}__wrapper`).forEach(elem=>{
+                elem.classList.remove('swiper-wrapper')
+            })
             
+            document.querySelectorAll(`.${target}__list-item`).forEach(element => {
+            element.classList.remove('swiper-slide')
+            });
+            isSwiperWork = false
+            return
         }
-    }
-
 }
 
 window.onload = sliderControl('content-body')
