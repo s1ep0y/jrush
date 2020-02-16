@@ -68,6 +68,7 @@
         
     }
     &__input{
+        font-size: em(16);
         width: 100%;
         box-sizing: border-box;
         border: 1px solid color('bright-gray');
@@ -79,6 +80,9 @@
                 height: 120px;
                 resize: none;
             }
+        }
+        &::placeholder{
+            color: color('ghost')
         }
     }
     &__button-with-text-and-arrow{
