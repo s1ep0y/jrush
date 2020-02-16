@@ -857,6 +857,7 @@ div.content {
 }
 
 .visible{
-    transform: translateX(0px) !important;
+    display: flex;
+    transform: translateX(0px) scaleX(1) !important;
     visibility: visible !important;
 }

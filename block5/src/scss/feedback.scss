@@ -18,6 +18,8 @@
     &::before{
         content: '';
     }
+    box-sizing: border-box;
+    z-index: 2;
     visibility: hidden;
     position: absolute;
     top: 0;
@@ -27,7 +29,7 @@
     box-shadow: 16px 0px 52px rgba(14, 24, 80, 0.2), -2px 0px 4px rgba(69, 79, 126, 0.02);
     background-color: color('white');
     width: 100%;
-    transform: translateX(768px);
+    transform: translateX(768px) scaleX(0);
     transition: transform 0.5s, visibility 0.7s;
     min-height: 100vh;
     padding: 24px 16px;

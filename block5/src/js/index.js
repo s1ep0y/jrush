@@ -8,7 +8,7 @@ document.addEventListener('click', (event)=>{
             document.body.style.overflow='auto'
         })
     }
-    // document.body.style
+
     const show = (target)=>{
         closeAll()
         console.log('check')
@@ -61,7 +61,7 @@ document.querySelectorAll('.show-hide-buttons').forEach(item=>{
 var isSwiperWork = undefined;
 
 function sliderControl(){
-    if(window.innerWidth < 768){
+    if(document.body.clientWidth < 768){
         isSwiperWork = true;
         document.querySelectorAll(`.content-body__container`).forEach(elem=>{
             elem.classList.add('swiper-container')
