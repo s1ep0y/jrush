@@ -1,11 +1,44 @@
-openMenu= () => {
+document.addEventListener('click', (event)=>{
+    console.log(event.target.name)
+    const closeAll = () =>{
+        document.querySelectorAll('.visible').forEach(item=>{
+            item.classList.remove('visible')
+            document.querySelector(`.content`).style.position='static';
+            document.querySelector('.war-fog').style.display = "none"
+            document.body.style.overflow='auto'
+        })
+    }
+    // document.body.style
+    const show = (target)=>{
+        closeAll()
+        console.log('check')
+        document.querySelector(`.${target}`).classList.add('visible');
+        document.body.style.overflow='hidden'
+    }
+    if(!event.target.closest('.visible')){
+        closeAll()
+    }
+    if(event.target.name == 'close'){
+        closeAll()
+    }
+    if(event.target.name == 'Open-Menu'){
+        show('side-menu')
+        
+    }
+    if(event.target.name == 'chat'){
+        
+        show('modal--name--feedback')
+        document.querySelector('.war-fog').style.display = "block"
+    }
+    if(event.target.name == 'call'){
+        show('modal--name--call')
+        document.querySelector('.war-fog').style.display = "block"
+    }
     
-    document.getElementById('menu').classList.add('visible');
-};
+    
+    
+})
 
-hideMenu = () => {
-    document.getElementById('menu').classList.remove('visible');
-};
 
 document.querySelectorAll('.show-hide-buttons').forEach(item=>{
     const change = item.previousElementSibling
@@ -22,6 +55,7 @@ document.querySelectorAll('.show-hide-buttons').forEach(item=>{
         close.style.display='none';
     })
 })
+
 
 
 var isSwiperWork = undefined;

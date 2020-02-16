@@ -11,14 +11,14 @@
     <body>
         <header class='page-header'>
             <div>
-                <button class='circle-fill-button circle-fill-button--icon-img--menu' onclick='openMenu()' name='Open-Menu'>Открыть меню</button>
+                <button class='circle-fill-button circle-fill-button--icon-img--menu' name='Open-Menu'>Открыть меню</button>
                 <div class='page-header__border'></div>
                 <img src='./img/icons/Group.svg' alt='Company logo' class='company-logo company-logo_header'>
             </div>
             <div>
                 <div class='contact-links contact-links--position--header'>
                     <button class='circle-fill-button circle-fill-button--icon-img--chat' name='chat'>Чат</button>
-                    <button class='circle-fill-button circle-fill-button--icon-img--call' name='chat'>Звонок</button>
+                    <button class='circle-fill-button circle-fill-button--icon-img--call' name='call'>Звонок</button>
                     <button class='circle-fill-button circle-fill-button--icon-img--profile' name='profile'>Профиль</button>                    
                 </div>
                 <div class='page-header__border'></div>
@@ -28,13 +28,11 @@
                 </div>
             </div>
         </header>
-
-        <main class='mainContent'>
-
+        <div class="wrapper">
             <aside class='side-menu' id='menu'>
                 <div class='side-menu__header'>
                     <div>
-                        <button class='circle-fill-button circle-fill-button--icon-img--close' onclick='hideMenu()' name='Close-Menu'>Закрыть меню</button>
+                        <button class='circle-fill-button circle-fill-button--icon-img--close' name='close'>Закрыть меню</button>
                         <img src='./img/icons/Group.svg' alt='Company logo' class='company-logo'>
                     </div>
                     <button class='circle-fill-button circle-fill-button--icon-img--search' name='search'>Поиск</button>
@@ -69,7 +67,7 @@
                 <div class='side-menu__footer '>
                     <div class='contact-links contact-links--position--menu '>
                         <button class='circle-fill-button circle-fill-button--icon-img--chat' name='chat'>Чат</button>
-                        <button class='circle-fill-button circle-fill-button--icon-img--call' name='chat'>Звонок</button>
+                        <button class='circle-fill-button circle-fill-button--icon-img--call' name='call'>Звонок</button>
                         <button class='circle-fill-button circle-fill-button--icon-img--profile' name='profile'>Профиль</button>
                     </div>
     
@@ -88,8 +86,9 @@
                     </ul>
                 </div>
             </aside>
-
             <div class="content">
+            <main class='main-content'>
+            
 
             <div class='content-header'>
                 <h1 class='content-header__title'>Услуги и сервисы</h1>
@@ -135,7 +134,7 @@
                                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus odit atque dicta maiores minus aut aliquid quam laborum, ad obcaecati quis nemo nulla minima quas, quos perspiciatis alias, temporibus saepe.
                             </p>
                         </div>
-                        <div class="show-hide-buttons">
+                        <div class="show-hide-buttons about-us__show-hide-buttons">
                             <button class='show-hide-buttons__read-more' name='read-more'>Читать далее</button>
                             <button class='show-hide-buttons__read-less show-hide-buttons__read-more--display--hide allahg'name='read-less'>Скрыть</button>
                         </div>
@@ -298,8 +297,8 @@
                             </div>
             </div>
             
-            </div>
-        </div>
+            
+        
         </main>
 
         <footer class="footer">
@@ -314,6 +313,31 @@
                 Информация, размещенная на данной странице, не является публичной офертой
             </p>
         </footer>
+    </div>
+    </div>
+    <div class="war-fog"> </div>
+    <div class="modal modal--name--feedback">
+        <button class='circle-fill-button circle-fill-button--icon-img--close modal__circle-fill-button' name='close'>Закрыть меню</button>
+        <h3 class="modal__title">Обратная связь</h3>
+        <form name="modal__form">
+            <input type="text" name="name" placeholder="Имя" class="modal__input modal__input--type--text">
+            <input type="number" name="phonenumber" placeholder="Телефон" class="modal__input modal__input--type--number" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" pattern='/^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/im' >
+            <input type="email" name="email" placeholder="Электронная почта" class=" modal__input modal__input--type--email">
+            <textarea name="message"  placeholder="Сообщение" class="modal__input modal__input--type--text-area"></textarea>
+            <p class="modal__text">Нажимая “отправить”, вы даете согласие на <a href="#">обработку персональных данных</a> и соглашаетесь с нашей <a href='#'>политикой конфиденциальности</a></p>
+            <button type="submit" class="button-with-text-and-arrow feedback__button-with-text-and-arrow">Отправить</button>
+        </form>
+    </div>
+    
+    <div class="modal modal--name--call">
+        <button class='circle-fill-button circle-fill-button--icon-img--close modal__circle-fill-button' name='close'>Закрыть меню</button>
+        <h3 class="modal__title">Обратная связь</h3>
+        <form action=""class='modal__form'>
+            <input type="number" name="phonenumber" placeholder="Телефон" class="modal__input modal__input--type--number" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" pattern='/^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/im' >
+            <p class="modal__text">Нажимая “отправить”, вы даете согласие на <a href="#" class="modal__link">обработку персональных данных</a> и соглашаетесь с нашей <a href='#'  class="modal__link">политикой конфиденциальности</a></p>
+            <button type="submit" class="button-with-text-and-arrow feedback__button-with-text-and-arrow">Отправить</button>
+        </form>
+    </div>
         <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
     </body>
 </html>
