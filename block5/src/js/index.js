@@ -1,19 +1,24 @@
-document.addEventListener('click', (event)=>{
-    console.log(event.target.name)
-    const closeAll = () =>{
-        document.querySelectorAll('.visible').forEach(item=>{
-            item.classList.remove('visible')
-            document.querySelector(`.content`).style.position='static';
-            document.querySelector('.war-fog').style.display = "none"
-            document.body.style.overflow='auto'
-        })
+const closeAll = () =>{
+    document.querySelectorAll('.visible').forEach(item=>{
+        item.classList.remove('visible')
+        // document.querySelector(`.content`).style.position='static';
+        document.querySelector('.war-fog').style.display = "none"
+    })
+}
+
+document.addEventListener('keydown', function (evt) {
+    if (evt.keyCode === 27) {
+    closeAll()
     }
+});
+
+document.addEventListener('click', (event)=>{
+    
 
     const show = (target)=>{
         closeAll()
-        console.log('check')
         document.querySelector(`.${target}`).classList.add('visible');
-        document.body.style.overflow='hidden'
+        
     }
     if(!event.target.closest('.visible')){
         closeAll()
@@ -86,6 +91,8 @@ function sliderControl(){
             document.querySelectorAll(`.prices__wrapper`).forEach(elem=>{
                 elem.classList.add('swiper-wrapper')
             })
+
+            
             let mySwiper = new Swiper ('.swiper-container',{
             slidesPerView: 'auto',
             spaceBetween: 16,

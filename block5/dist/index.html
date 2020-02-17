@@ -319,10 +319,10 @@
     <div class="modal modal--name--feedback">
         <button class="circle-fill-button circle-fill-button--icon-img--close modal__circle-fill-button" name="close">Закрыть меню</button>
         <h3 class="modal__title">Обратная связь</h3>
-        <form name="modal__form">
-            <input type="text" name="name" placeholder="Имя" class="modal__input modal__input--type--text">
-            <input type="number" name="phonenumber" placeholder="Телефон" class="modal__input modal__input--type--number" oninput="if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" pattern="/^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/im">
-            <input type="email" name="email" placeholder="Электронная почта" class="modal__input modal__input--type--email">
+        <form action="" class="modal__form" method="post" name="back-request-form">
+            <input required type="text" name="name" placeholder="Имя" class="modal__input modal__input--type--text">
+            <input type="tel" name="phonenumber" placeholder="Телефон" class="modal__input modal__input--type--number" pattern="(\+7|7|8)?[\s\-]?\(?[489][0-9]{2}\)?[\s\-]?[0-9]{3}[\s\-]?[0-9]{2}[\s\-]?[0-9]{2}" required>
+            <input required type="email" name="email" placeholder="Электронная почта" class="modal__input modal__input--type--email">
             <textarea name="message" placeholder="Сообщение" class="modal__input modal__input--type--text-area"></textarea>
             <p class="modal__text">Нажимая “отправить”, вы даете согласие на <a href="#" class="modal__link">обработку персональных данных</a> и соглашаетесь с нашей <a href="#" class="modal__link">политикой конфиденциальности</a></p>
             <button type="submit" class="button-with-text-and-arrow feedback__button-with-text-and-arrow">Отправить</button>
@@ -332,8 +332,8 @@
     <div class="modal modal--name--call">
         <button class="circle-fill-button circle-fill-button--icon-img--close modal__circle-fill-button" name="close">Закрыть меню</button>
         <h3 class="modal__title">Заказать звонок</h3>
-        <form action="" class="modal__form">
-            <input type="number" name="phonenumber" placeholder="Телефон" class="modal__input modal__input--type--number" oninput="if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" pattern="/^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/im">
+        <form action="" class="modal__form" method="post" name="call-form">
+            <input type="tel" name="phonenumber" placeholder="Телефон" class="modal__input modal__input--type--number" pattern="(\+7|7|8)?[\s\-]?\(?[489][0-9]{2}\)?[\s\-]?[0-9]{3}[\s\-]?[0-9]{2}[\s\-]?[0-9]{2}" required>
             <p class="modal__text">Нажимая “отправить”, вы даете согласие на <a href="#" class="modal__link">обработку персональных данных</a> и соглашаетесь с нашей <a href="#" class="modal__link">политикой конфиденциальности</a></p>
             <button type="submit" class="button-with-text-and-arrow feedback__button-with-text-and-arrow">Отправить</button>
         </form>
