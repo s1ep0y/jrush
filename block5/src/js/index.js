@@ -1,48 +1,64 @@
-const closeAll = () =>{
-    document.querySelectorAll('.visible').forEach(item=>{
-        item.classList.remove('visible')
-        // document.querySelector(`.content`).style.position='static';
-        document.querySelector('.war-fog').style.display = "none"
-    })
-}
+const warFog = document.querySelector('.war-fog')
+const showWarFog = (()=> warFog.style.display = 'block')
+const hideWarFog = (()=> warFog.style.display = 'none')
 
-document.addEventListener('keydown', function (evt) {
-    if (evt.keyCode === 27) {
-    closeAll()
-    }
-});
+const lockBody = (()=> document.querySelector('body').style.overflow='hidden')
+const unlockBody = (()=> document.querySelector('body').style.overflow='auto')
 
-document.addEventListener('click', (event)=>{
-    
+const callButton = document.querySelectorAll('[name=call]')
+const feedbackButton = document.querySelectorAll('[name=feedback]')
+const menuButton = document.querySelector('[name=open-menu]')
 
-    const show = (target)=>{
-        closeAll()
-        document.querySelector(`.${target}`).classList.add('visible');
-        
-    }
-    if(!event.target.closest('.visible')){
-        closeAll()
-    }
-    if(event.target.name == 'close'){
-        closeAll()
-    }
-    if(event.target.name == 'Open-Menu'){
-        show('side-menu')
-        
-    }
-    if(event.target.name == 'chat'){
-        
-        show('modal--name--feedback')
-        document.querySelector('.war-fog').style.display = "block"
-    }
-    if(event.target.name == 'call'){
-        show('modal--name--call')
-        document.querySelector('.war-fog').style.display = "block"
-    }
-    
-    
-    
+const closeButton = document.querySelectorAll('[name=close]')
+
+const menu = document.querySelector('.side-menu')
+const callModal = document.querySelector('.modal--name--call')
+const feedbackModal = document.querySelector('.modal--name--feedback')
+
+
+
+
+
+menuButton.addEventListener('click', (event)=>{
+    menu.classList.add('visible')
+    lockBody()
+    showWarFog();
 })
+
+feedbackButton.forEach((button)=>{
+    button.addEventListener('click', (event)=>{
+        menu.classList.remove('visible')
+        feedbackModal.classList.add('visible')
+        lockBody()
+        showWarFog();
+    })
+})
+
+callButton.forEach((button)=>{
+    button.addEventListener('click', (event)=>{
+        console.log('sup')
+        menu.classList.remove('visible')
+        callModal.classList.add('visible')
+        lockBody()
+        showWarFog();
+    })
+})
+
+closeButton.forEach((button)=>{
+    button.addEventListener('click', (event)=>{
+        event.target.closest('.visible').classList.remove('visible')
+        hideWarFog()
+        unlockBody()
+        
+})
+})
+
+warFog.addEventListener('click', (event)=>{
+    document.querySelector('.visible').classList.remove('visible')
+    hideWarFog()
+    unlockBody()
+})
+
 
 
 document.querySelectorAll('.show-hide-buttons').forEach(item=>{

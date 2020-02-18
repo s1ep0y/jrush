@@ -1,7 +1,7 @@
 @import "./../fonts/stylesheet.css";
-@import "./aside.scss";
+@import "./side-menu.scss";
 @import "./mixins.scss";
-@import "./feedback.scss";
+@import "./modal.scss";
 
 //px to em
 
@@ -135,12 +135,7 @@ body {
             &::before {
                 background-image: url("./../img/icons/close.svg");
             }
-
             margin-right: 16px;
-
-            @media (min-width: 1120px) {
-                display: none;
-            }
         }
     }
 
@@ -157,7 +152,7 @@ body {
         display: none;
     }
 
-    &>div {
+    &__section {
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -281,7 +276,7 @@ body {
 
     &--position {
         &--header {
-            @media (min-width: 768px) and (max-width: 1119px) {
+            @media (min-width: 500px) and (max-width: 1119px) {
                 display: flex;
             }
         }
@@ -338,13 +333,15 @@ body {
 
     &__navigation {
         display: flex;
-        overflow-y: scroll;
         padding: 2px;
         flex: 1 1 100%;
+        overflow-x: scroll;
+        
 
         @media (max-width: 767px) {
             margin-bottom: 24px;
             margin-top: 24px;
+            overflow-y: hidden;
         }
 
         @media (min-width: 768px) and (max-width: 1119px) {
@@ -356,6 +353,7 @@ body {
             margin-top: 8px;
             margin-bottom: 8px;
             flex-wrap: wrap;
+            overflow-x: inherit;
         }
     }
 
@@ -856,7 +854,24 @@ div.content {
     }
 }
 
+.war-fog{
+    z-index: 0;
+    position: fixed;
+    width: 200vw;
+    height: 200vh;
+    content: '';
+    top: 0;
+    left: 0;
+    display: none;
+    background: color('white');
+    opacity: 0.95;
+}
+
 .visible{
+    z-index: 2;
+    overflow: visible;
+    overflow-y: scroll;
+    max-height: 100vh;
     display: flex;
     transform: translateX(0px) scaleX(1) !important;
     visibility: visible !important;

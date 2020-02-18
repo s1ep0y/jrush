@@ -1,18 +1,6 @@
 @import "./mixins.scss";
 
-.war-fog{
-    z-index: 0;
-    position: fixed;
-    width: 200vw;
-    height: 200vh;
-    content: '';
-    top: 0;
-    left: 0;
-    display: none;
-    background: color('white');
-    opacity: 0.95;
-    
-}
+
 
 .modal{
     &::before{
@@ -80,7 +68,7 @@
                 height: 120px;
                 resize: none;
             }
-        }
+        } 
         &::placeholder{
             color: color('ghost')
         }
